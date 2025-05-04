@@ -17,14 +17,16 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--azul-petroleo);
+    color: #333;
+    margin: 0;
+    padding: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    background: linear-gradient(135deg, #eae6f7, #fefefe);
 }
-
-
 
 .container {
     background-color: white;
@@ -33,17 +35,26 @@ body {
     padding: 30px;
     width: 100%;
     max-width: 480px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaço entre o ícone e o texto */
+    margin-bottom: 20px;
+}
+
 h1 {
     color: var(--azul-petroleo);
-    text-align: center;
     font-size: 28px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin: 0px;
+        
 }
 
 .chatbox {
@@ -55,8 +66,20 @@ h1 {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .message {
@@ -79,7 +102,7 @@ h1 {
 
 .bot-message {
     align-self: flex-start;
-    background-color: #e8f1f5;
+    background-color: #d0e4ed;
     color: var(--azul-petroleo);
     border-bottom-left-radius: 4px;
 }
@@ -119,16 +142,16 @@ h1 {
     transition: all 0.3s ease;
 }
 
+#sendButton:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 #sendButton:hover {
     background-color: var(--dourado-claro);
     color: var(--azul-petroleo);
     transform: scale(1.03);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 520px) {
@@ -142,11 +165,43 @@ h1 {
     }
 
     #sendButton {
-        with: 100%;
+        width: 100%;
         padding: 12px 20px;
     }
+
     #userInput {
         width: 100%;
         padding: 12px 14px;
+    }
+}
+.robot-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #eae6f7, #fefefe);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     }
 }
