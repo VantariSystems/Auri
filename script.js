@@ -103,14 +103,8 @@ function gerarResposta(mensagem) {
         return sobreVantari[Math.floor(Math.random() * sobreVantari.length)];
     }
 
-    // Sugestões quando não entender a mensagem
-    const sugestoes = [
-        "Você pode perguntar sobre os projetos que já fizemos. 😊",
-        "Quer saber mais sobre a criadora deste chatbot? É só perguntar! 💡",
-        "Posso te contar mais sobre a Vantari Systems. O que acha? 🚀",
-        "Se quiser, posso sugerir algo para conversarmos. É só dizer! 🤖"
-    ];
-    return `Eita... 🤔 Não entendi nadinha. Tenta perguntar de outro jeito? Aqui vão algumas sugestões: \n- ${sugestoes.join("\n- ")}`;
+    // Adicione mais condições aqui para personalizar as respostas
+    return "Eita... 🤔 Não entendi nadinha. Tenta perguntar de outro jeito? Ou só fala comigo mesmo, gosto de conversar! 😄";
 }
 
 // Função para interações extras
