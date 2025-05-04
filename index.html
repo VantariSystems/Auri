@@ -8,15 +8,27 @@
 </head>
 <body>
     <div class="container">
-        <h1>🤖 Auri</h1>
-        <div id="chatbox" class="chatbox"></div>
+        <div class="header">
+            <div class="robot-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="50" height="50">
+                    <rect x="12" y="20" width="40" height="30" rx="5" ry="5" fill="#D4AF37" />
+                    <circle cx="22" cy="35" r="5" fill="#003B5C" />
+                    <circle cx="42" cy="35" r="5" fill="#003B5C" />
+                    <rect x="28" y="40" width="8" height="5" fill="#003B5C" />
+                    <rect x="30" y="10" width="4" height="10" fill="#D4AF37" />
+                    <circle cx="32" cy="8" r="4" fill="#D4AF37" stroke="#003B5C" stroke-width="2" />
+                </svg>
+            </div>
+            <h1>Auri</h1>
+        </div>
+        <h2 class="sr-only">Histórico de mensagens</h2>
+        <div id="chatbox" class="chatbox" role="log" aria-live="polite"></div>
         <div id="input-container">
             <input type="text" id="userInput" placeholder="Digite sua pergunta...">
-            <button id="sendButton">Enviar</button>
+            <button id="sendButton" aria-label="Enviar mensagem">Enviar</button>
         </div>
         <div id="loadingIcon" style="display:none;">🔄</div>
-
-    <script src="script.js"></script>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
