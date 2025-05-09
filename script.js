@@ -54,19 +54,16 @@ function carregarHistorico() {
     }
 }
 
-// Função para gerar respostas do chatbot
 function gerarResposta(mensagem) {
     if (etapaConversacao === "projetos_ou_habilidades") {
         etapaConversacao = null;
-        if (mensagem.includes("projeto")) {
-    return "Ela já criou soluções pra causas sociais, sites institucionais e até joguinhos simples em JS. Mas em vez de listar tudo, que tal dar uma olhada rápida na seção de projetos acima? Se quiser detalhes ou acesso ao repositório, é só chamar a Rafa por e-mail ou GitHub no final da página! 📬";
-}
 
+        if (mensagem.includes("projeto")) {
+            return "Ela já criou soluções pra causas sociais, sites institucionais e até joguinhos simples em JS. Mas em vez de listar tudo, que tal dar uma olhada rápida na seção de projetos acima? Se quiser detalhes ou acesso ao repositório, é só chamar a Rafa por e-mail ou GitHub no final da página! 📬";
         } else if (mensagem.includes("habilidade") || mensagem.includes("skill")) {
             return "A Rafa está aprendendo tecnologias como HTML, CSS e JavaScript, e começou a explorar o mundo do Python também! 🐍 Tudo com foco em criar coisas úteis e simples. Quer ver como ela tem aplicado isso?";
         } else {
             return "Hmm, não peguei muito bem, mas posso te mostrar projetos e habilidades. Qual você prefere? 😉";
-            ;
         }
     }
 
@@ -74,7 +71,6 @@ function gerarResposta(mensagem) {
         etapaConversacao = "projetos_ou_habilidades";
         return "Claro! 😄 O que você gostaria de saber mais? Vamos conversar sobre os **projetos incríveis** ou as **habilidades que ela está desenvolvendo**? 💻🚀";
     }
-    
 
     if (mensagem.includes("tudo bem") || mensagem.includes("como você está") || mensagem.includes("como vai") || mensagem.includes("tudo certo")) {
         const respostasTudoBem = [
@@ -84,34 +80,28 @@ function gerarResposta(mensagem) {
         ];
         return respostasTudoBem[Math.floor(Math.random() * respostasTudoBem.length)];
     }
+
     if (mensagem.includes("trabalho em equipe") || mensagem.includes("soft skills")) {
         return "A Rafa curte muito trabalhar em equipe, resolver problemas de forma prática e criar com empatia. Ela acredita que o lado humano também conta (e muito!) na tecnologia. Que tal ver como ela coloca isso em prática nos projetos? 👩‍💻";
     }
 
-     if (mensagem.includes("vantari") || mensagem.includes("empresa")) {
-            return "A Vantari nasceu com o propósito de tornar a tecnologia mais acessível, prática e humana. Começou com ideias pequenas e já tá virando solução real. Quer entender a visão por trás da marca? Fala com a fundadora — ela adora trocar ideia!";
-        }        
-🌱";
+    if (mensagem.includes("curiosidades") || mensagem.includes("algo que eu ainda não saiba")) {
+        const curiosidades = [
+            "Sabia que a Rafa veio da área da saúde? Essa transição tá rendendo umas ideias bem criativas! 💡",
+            "Se quiser, posso contar como foi o processo de criação desse portfólio... ou você pode perguntar direto pra ela ali no final! 😉",
+            "Ela acredita que a simplicidade e a empatia também fazem parte do bom código. Curioso pra entender melhor? Manda uma pergunta pra ela!",
+            "Cada projeto aqui tem um porquê. Mas não vou entregar tudo de bandeja... Quer entender o contexto? Bora conversar com ela. 💬",
+            "Ah, e ela é daquelas que aprende rápido e vai fundo! Quer ver isso ao vivo? Clica no contato lá embaixo. 🚀"
+        ];
+        return curiosidades[Math.floor(Math.random() * curiosidades.length)];
     }
-    if (mensagem.includes(Curiosidades) || mensagem.includes("Algo que eu ainda não saiba")){
-        [
-            const interacoesExtras = [
-                "Sabia que a Rafa veio da área da saúde? Essa transição tá rendendo umas ideias bem criativas! 💡",
-                "Se quiser, posso contar como foi o processo de criação desse portfólio... ou você pode perguntar direto pra ela ali no final! 😉",
-                "Ela acredita que a simplicidade e a empatia também fazem parte do bom código. Curioso pra entender melhor? Manda uma pergunta pra ela!",
-                "Cada projeto aqui tem um porquê. Mas não vou entregar tudo de bandeja... Quer entender o contexto? Bora conversar com ela. 💬",
-                "Ah, e ela é daquelas que aprende rápido e vai fundo! Quer ver isso ao vivo? Clica no contato lá embaixo. 🚀" 
-            ];
-            
-          ]
-          
-    }
+
     if (mensagem.includes("oi") || mensagem.includes("olá") || mensagem.includes("e aí")) {
         const respostasSaudacao = [
             "Oi! 😊 Eu sou a Auri. Quer saber mais sobre a Rafaella? É só perguntar!",
             "Olá! 👋 Posso te contar sobre os projetos, habilidades e a história da Rafa.",
             "E aí! 🚀 Bora bater um papo sobre essa jornada na tecnologia?",
-            "Oi, oi! Estou por aqui pra te ajudar a conhecer melhor a Rafaella. 😄""
+            "Oi, oi! Estou por aqui pra te ajudar a conhecer melhor a Rafaella. 😄"
         ];
         return respostasSaudacao[Math.floor(Math.random() * respostasSaudacao.length)];
     }
@@ -127,15 +117,16 @@ function gerarResposta(mensagem) {
         return sobreVantari[Math.floor(Math.random() * sobreVantari.length)];
     }
 
-    // Adicione mais condições aqui para personalizar as respostas
     const sugestoes = [
         "Pergunte sobre os projetos dela.",
         "Quer saber mais sobre a criadora deste chatbot? É só perguntar! 💡",
-        "Quer conhecer a Vantari System?"🚀",
+        "Quer conhecer a Vantari System? 🚀",
         "Se quiser, posso sugerir algo para conversarmos. É só dizer! 🤖"
     ];
+
     return "Hmm... 😅 não entendi muito bem. Mas tô aprendendo! Tenta perguntar de outro jeitinho?\nAlgumas dicas:\n- Pergunte sobre os projetos dela\n- Ou as habilidades que ela tá desenvolvendo\n- Ou ainda sobre a Vantari System!";
 }
+
 
 // Função para interações extras
 function interacaoExtra() {
