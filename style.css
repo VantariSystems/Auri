@@ -141,7 +141,6 @@ h1 {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 #sendButton:active {
     transform: scale(0.98);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -152,7 +151,24 @@ h1 {
     color: var(--azul-petroleo);
     transform: scale(1.03);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
 }
+
+.auri-footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background-color: #f8f8f8;
+    color: #333;
+    border-top: 1px solid #ccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 2rem;
+}
+
+.auri-footer strong {
+    color: #003B5C;
+}
+
 
 @media (max-width: 520px) {
     .container {
