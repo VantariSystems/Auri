@@ -154,22 +154,6 @@ h1 {
 
 }
 
-.auri-footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    background-color: #f8f8f8;
-    color: #333;
-    border-top: 1px solid #ccc;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 2rem;
-}
-
-.auri-footer strong {
-    color: #003B5C;
-}
-
-
 @media (max-width: 520px) {
     .container {
         width: 100%;
