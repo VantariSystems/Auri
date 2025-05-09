@@ -1,9 +1,7 @@
-// Variáveis globais
 let modoSecretoAtivo = false;
 let contadorMensagens = 0;
 let etapaConversacao = null;
 
-// Função principal para enviar mensagens
 function enviarMensagem() {
     const inputMensagem = document.getElementById("userInput");
     const mensagem = inputMensagem.value.toLowerCase().trim();
@@ -30,7 +28,6 @@ function enviarMensagem() {
     }
 }
 
-// Função para adicionar mensagens ao chat
 function adicionarMensagemAoChat(texto, classe) {
     const chatBox = document.getElementById("chatbox");
     const novaMensagem = document.createElement("div");
@@ -40,7 +37,6 @@ function adicionarMensagemAoChat(texto, classe) {
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// Função para salvar e carregar histórico do chat
 function salvarHistorico() {
     const chatBox = document.getElementById("chatbox");
     const mensagens = chatBox.innerHTML;
@@ -127,8 +123,6 @@ function gerarResposta(mensagem) {
     return "Hmm... 😅 não entendi muito bem. Mas tô aprendendo! Tenta perguntar de outro jeitinho?\nAlgumas dicas:\n- Pergunte sobre os projetos dela\n- Ou as habilidades que ela tá desenvolvendo\n- Ou ainda sobre a Vantari System!";
 }
 
-
-// Função para interações extras
 function interacaoExtra() {
     const interacoesExtras = [
         "Sabia que a Rafa tá migrando da saúde pra tecnologia? 💡 Uma virada e tanto!",
@@ -142,7 +136,6 @@ function interacaoExtra() {
     }, 2000);
 }
 
-// Funções para indicador de "digitando..."
 function mostrarDigitando() {
     const chatBox = document.getElementById("chatbox");
     const digitando = document.createElement("div");
@@ -158,11 +151,9 @@ function removerDigitando(elemento) {
     elemento.remove();
 }
 
-// Eventos de carregamento e saída da página
 window.onload = carregarHistorico;
 window.onbeforeunload = salvarHistorico;
 
-// Eventos de interação com o botão e o campo de entrada
 document.getElementById("sendButton").addEventListener("click", enviarMensagem);
 document.getElementById("userInput").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
@@ -170,7 +161,6 @@ document.getElementById("userInput").addEventListener("keypress", function(event
     }
 });
 
-// Carregar tema ao iniciar
 window.onload = () => {
     const savedTheme = localStorage.getItem("theme") || "light";
     document.body.setAttribute("data-theme", savedTheme);
