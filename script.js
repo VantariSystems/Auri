@@ -59,35 +59,59 @@ function gerarResposta(mensagem) {
     if (etapaConversacao === "projetos_ou_habilidades") {
         etapaConversacao = null;
         if (mensagem.includes("projeto")) {
-            return "Beleza! Tem projeto de impacto social, joguinho retrô, e até experiências com API. Qual tipo você prefere?";
+    return "Ela já criou soluções pra causas sociais, sites institucionais e até joguinhos simples em JS. Mas em vez de listar tudo, que tal dar uma olhada rápida na seção de projetos acima? Se quiser detalhes ou acesso ao repositório, é só chamar a Rafa por e-mail ou GitHub no final da página! 📬";
+}
+
         } else if (mensagem.includes("habilidade") || mensagem.includes("skill")) {
-            return "Ela manda bem em HTML, CSS, JS e está por começar a se aventurar no mundo do Python. Quer ver um exemplo prático?";
+            return "A Rafa está aprendendo tecnologias como HTML, CSS e JavaScript, e começou a explorar o mundo do Python também! 🐍 Tudo com foco em criar coisas úteis e simples. Quer ver como ela tem aplicado isso?";
         } else {
-            return "Hmm, não entendi bem, mas posso te mostrar os dois se quiser! 😄";
+            return "Hmm, não peguei muito bem, mas posso te mostrar projetos e habilidades. Qual você prefere? 😉";
+            ;
         }
     }
 
     if (mensagem.includes("me fale mais dela") || mensagem.includes("quero saber mais dela")) {
         etapaConversacao = "projetos_ou_habilidades";
-        return "Você quer saber mais sobre os projetos ou sobre as habilidades dela? 💡";
+        return "Claro! 😄 O que você gostaria de saber mais? Vamos conversar sobre os **projetos incríveis** ou as **habilidades que ela está desenvolvendo**? 💻🚀";
     }
+    
 
     if (mensagem.includes("tudo bem") || mensagem.includes("como você está") || mensagem.includes("como vai") || mensagem.includes("tudo certo")) {
         const respostasTudoBem = [
-            "Tudo ótimo aqui! E você? Tudo certo por aí? 😄",
-            "Tá tudo bem! E você, como está se sentindo?",
-            "Tudo bem, sempre na correria aqui! E aí, como vai você?",
-            "Eu estou bem, e você? Como está indo o dia? 😊"
+            "Tudo bem por aqui! E você, tudo certo? 😄",
+            "Com o cérebro cheio de código, mas tudo tranquilo! 😎",
+            "Estou sempre cheia de energia! E você, como vai? 🚀",
         ];
         return respostasTudoBem[Math.floor(Math.random() * respostasTudoBem.length)];
     }
+    if (mensagem.includes("trabalho em equipe") || mensagem.includes("soft skills")) {
+        return "A Rafa curte muito trabalhar em equipe, resolver problemas de forma prática e criar com empatia. Ela acredita que o lado humano também conta (e muito!) na tecnologia. Que tal ver como ela coloca isso em prática nos projetos? 👩‍💻";
+    }
 
+     if (mensagem.includes("vantari") || mensagem.includes("empresa")) {
+            return "A Vantari nasceu com o propósito de tornar a tecnologia mais acessível, prática e humana. Começou com ideias pequenas e já tá virando solução real. Quer entender a visão por trás da marca? Fala com a fundadora — ela adora trocar ideia!";
+        }        
+🌱";
+    }
+    if (mensagem.includes(Curiosidades) || mensagem.includes("Algo que eu ainda não saiba")){
+        [
+            const interacoesExtras = [
+                "Sabia que a Rafa veio da área da saúde? Essa transição tá rendendo umas ideias bem criativas! 💡",
+                "Se quiser, posso contar como foi o processo de criação desse portfólio... ou você pode perguntar direto pra ela ali no final! 😉",
+                "Ela acredita que a simplicidade e a empatia também fazem parte do bom código. Curioso pra entender melhor? Manda uma pergunta pra ela!",
+                "Cada projeto aqui tem um porquê. Mas não vou entregar tudo de bandeja... Quer entender o contexto? Bora conversar com ela. 💬",
+                "Ah, e ela é daquelas que aprende rápido e vai fundo! Quer ver isso ao vivo? Clica no contato lá embaixo. 🚀" 
+            ];
+            
+          ]
+          
+    }
     if (mensagem.includes("oi") || mensagem.includes("olá") || mensagem.includes("e aí")) {
         const respostasSaudacao = [
-            "Oi! Tudo bem com você? 😊",
-            "Olá! Como posso te ajudar hoje? 😄",
-            "E aí! Pronto para bater um papo? 🤖",
-            "Oi, oi! Espero que seu dia esteja ótimo! 🚀"
+            "Oi! 😊 Eu sou a Auri. Quer saber mais sobre a Rafaella? É só perguntar!",
+            "Olá! 👋 Posso te contar sobre os projetos, habilidades e a história da Rafa.",
+            "E aí! 🚀 Bora bater um papo sobre essa jornada na tecnologia?",
+            "Oi, oi! Estou por aqui pra te ajudar a conhecer melhor a Rafaella. 😄""
         ];
         return respostasSaudacao[Math.floor(Math.random() * respostasSaudacao.length)];
     }
@@ -104,17 +128,23 @@ function gerarResposta(mensagem) {
     }
 
     // Adicione mais condições aqui para personalizar as respostas
-    return "Eita... 🤔 Não entendi nadinha. Tenta perguntar de outro jeito? Ou só fala comigo mesmo, gosto de conversar! 😄";
+    const sugestoes = [
+        "Pergunte sobre os projetos dela.",
+        "Quer saber mais sobre a criadora deste chatbot? É só perguntar! 💡",
+        "Quer conhecer a Vantari System?"🚀",
+        "Se quiser, posso sugerir algo para conversarmos. É só dizer! 🤖"
+    ];
+    return "Hmm... 😅 não entendi muito bem. Mas tô aprendendo! Tenta perguntar de outro jeitinho?\nAlgumas dicas:\n- Pergunte sobre os projetos dela\n- Ou as habilidades que ela tá desenvolvendo\n- Ou ainda sobre a Vantari System!";
 }
 
 // Função para interações extras
 function interacaoExtra() {
     const interacoesExtras = [
-        "Sabia que a criadora deste portfólio adora unir código e arte? 🎨💻",
-        "Se quiser, posso contar os bastidores da criação desse site. Quer ouvir? 😏",
-        "Você prefere ver mais sobre os projetos ou sobre as habilidades dela? 👀",
-        "Aliás, você sabia que ela começou a programar há pouco tempo e já manda super bem? 🚀",
-        "Curte design também ou está mais pelo código mesmo? 👩‍💻👨‍🎨"
+        "Sabia que a Rafa tá migrando da saúde pra tecnologia? 💡 Uma virada e tanto!",
+        "Se quiser, posso te contar os bastidores da criação deste portfólio. 😏",
+        "Você é mais do tipo que gosta de design ou prefere focar no código? 👩‍🎨👨‍💻",
+        "Ah, e ela adora criar soluções simples que realmente ajudam alguém de verdade. ❤️",
+        "Ainda tô aprendendo junto com ela, então vamos evoluindo aos poucos, combinado? 😉"
     ];
     setTimeout(() => {
         adicionarMensagemAoChat(interacoesExtras[Math.floor(Math.random() * interacoesExtras.length)], "bot-message");
@@ -147,16 +177,6 @@ document.getElementById("userInput").addEventListener("keypress", function(event
     if (event.key === "Enter") {
         enviarMensagem();
     }
-});
-
-// Tema alternativo (dark/light)
-const toggleThemeButton = document.getElementById('toggleThemeButton');
-toggleThemeButton.addEventListener("click", () => {
-    const body = document.body;
-    const currentTheme = body.getAttribute("data-theme");
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-    body.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
 });
 
 // Carregar tema ao iniciar
