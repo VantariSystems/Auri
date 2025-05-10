@@ -1,12 +1,20 @@
+Licença de Uso Exclusivo - AURI | Rafaella de Sousa Andrelino
 
-## Direitos Autorais
+AURI é uma assistente virtual desenvolvida de forma original por Rafaella de Sousa Andrelino. Toda a lógica, diálogos, estrutura de interação, identidade e código são protegidos por direitos autorais.
 
-© 2025 Rafaella de Sousa Andrelino. Todos os direitos reservados.
+Este projeto é pessoal, intransferível e não pode ser utilizado, copiado ou modificado sem autorização expressa da autora.
 
-Este projeto foi idealizado, desenvolvido e publicado por mim, com o objetivo de apoiar pessoas em situações desafiadoras por meio da tecnologia.
+**É expressamente proibido:**
+- Clonar, copiar ou hospedar total ou parcialmente este projeto;
+- Modificar qualquer parte do código ou identidade para redistribuição;
+- Usar como base para criação de outros assistentes ou produtos digitais;
+- Comercializar, apresentar ou publicar sob qualquer forma ou pretexto.
 
-**Não é permitida a cópia, redistribuição, modificação ou uso parcial/total deste código sem minha autorização expressa por escrito.**
+**Permissões limitadas:**
+- Apenas visualização para fins educacionais, sem uso direto do código, estrutura ou identidade.
 
-Caso você tenha interesse em colaborar ou utilizar trechos para fins educacionais, entre em contato pelo e-mail disponível no portfólio.
+**Violação desta licença pode configurar infração de direitos autorais.**
 
-Violação de uso pode acarretar medidas legais conforme a Lei de Direitos Autorais (Lei 9.610/98 - Brasil) e os Termos do GitHub.
+Para permissões formais ou uso autorizado, entre em contato diretamente com a autora.
+
+© 2025 Rafaella de Sousa Andrelino – Todos os direitos reservados
