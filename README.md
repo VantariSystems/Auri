@@ -3,7 +3,7 @@
 
 © 2025 Rafaella de Sousa Andrelino. Todos os direitos reservados.
 
-Este projeto foi idealizado, desenvolvido e publicado por mim, com o objetivo de [inserir aqui o propósito do projeto — ex: apoiar pessoas em situações desafiadoras por meio da tecnologia].
+Este projeto foi idealizado, desenvolvido e publicado por mim, com o objetivo de apoiar pessoas em situações desafiadoras por meio da tecnologia.
 
 **Não é permitida a cópia, redistribuição, modificação ou uso parcial/total deste código sem minha autorização expressa por escrito.**
 
